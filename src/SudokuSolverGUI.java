@@ -7,7 +7,7 @@ import java.io.IOException;
 import javax.swing.JPanel;
 import javax.swing.Timer;
 
-public class SudokuGUI extends JPanel implements ActionListener {
+public class SudokuSolverGUI extends JPanel implements ActionListener {
 
     // fields
     private SudokuData data;
@@ -15,7 +15,7 @@ public class SudokuGUI extends JPanel implements ActionListener {
     private SudokuVisual visual;
 
     // constructor
-    public SudokuGUI() {
+    public SudokuSolverGUI() {
         try {
             this.data = new SudokuData("sample_hard3.txt");
         } catch (IOException e) {
@@ -30,7 +30,7 @@ public class SudokuGUI extends JPanel implements ActionListener {
         this.add(visual, BorderLayout.CENTER);
         this.visual.setPreferredSize(new Dimension(729, 729));
         
-        Timer t = new Timer(100, this);
+        Timer t = new Timer(50, this);
         t.start();
 
     }

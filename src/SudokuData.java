@@ -218,6 +218,10 @@ public class SudokuData {
         }
     }
 
+    public boolean getIsFinished() {
+        return this.isFinished;
+    }
+
     private boolean checkFinished() {
         if (isFinished)
             return true;

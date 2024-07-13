@@ -48,7 +48,12 @@ public class SudokuOptions extends JPanel implements ActionListener {
             this.nextEvent.setText(e.toString());
         }
         else {
-            this.nextEvent.setText("Empty!");
+            if (data.getIsFinished()) {
+                this.nextEvent.setText("Finished! :)");
+            }
+            else {
+                this.nextEvent.setText("Empty!");
+            }
         }
     }
 
